@@ -39,6 +39,7 @@ namespace Opm {
 
         const std::string& name() const;
         void setFixedSize();
+        bool isFixedSize();
         void setLocation(const std::string& fileName, int lineNumber);
         const std::string& getFileName() const;
         int getLineNumber() const;
@@ -90,4 +91,3 @@ namespace Opm {
 }
 
 #endif  /* DECKKEYWORD_HPP */
-

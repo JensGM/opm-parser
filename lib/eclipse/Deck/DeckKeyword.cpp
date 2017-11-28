@@ -47,6 +47,10 @@ namespace Opm {
         m_slashTerminated = false;
     }
 
+    bool DeckKeyword::isFixedSize() {
+        return m_slashTerminated;
+    }
+
     void DeckKeyword::setLocation(const std::string& fileName, int lineNumber) {
         m_fileName = fileName;
         m_lineNumber = lineNumber;
@@ -193,4 +197,3 @@ namespace Opm {
     }
 
 }
-
