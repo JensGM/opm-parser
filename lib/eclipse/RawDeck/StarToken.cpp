@@ -76,6 +76,12 @@ namespace Opm {
         const bool ok = qi::parse( cursor, view.end(), qi::int_, n );
 
         if( ok && cursor == view.end() ) return n;
+        const char* s = view.begin();
+        const char* d = s - 32;
+        std::cout << "STRING: ";
+        for (int i = 0; i < 64; i++)
+            std::cout << d[i];
+         std::cout << std::endl;
         throw std::invalid_argument( "Malformed integer '" + view + "'" );
     }
 
@@ -138,4 +144,3 @@ namespace Opm {
     }
 
 }
-
